@@ -1,5 +1,14 @@
 <h2><a href="https://leetcode.com/problems/zigzag-conversion">Zigzag Conversion</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>The string <code>&quot;PAYPALISHIRING&quot;</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)</p>
 
+<h3>My comment:</h3>
+I did this in the most difficult way. It would have been easier to slosh an index back and forth between [0, numRows) to select an entry
+in an array of strings or character vectors to append to, and then concatenate those new character segments. The implementation there
+seems like it might be more performant because it has less conditionals per group, having to essentially allocate the solution string twice
+may slow things down, and definitely uses more memory.
+
+Despite the original (automated commit) this does not take 10ms. On the first resubmission I got a 4ms time.
+At speeds like this with LeetCode's benchmarking, most of the result is error.
+
 <pre>
 P   A   H   N
 A P L S I I G
